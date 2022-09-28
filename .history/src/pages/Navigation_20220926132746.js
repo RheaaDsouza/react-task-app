@@ -15,11 +15,9 @@ function Navigation() {
       setTheme("dark-theme");
     }
   };
-
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
   return (
     <div className={theme}>
       <button className="btn" onClick={toggleTheme}>

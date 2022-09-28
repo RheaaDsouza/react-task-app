@@ -15,11 +15,9 @@ function Navigation() {
       setTheme("dark-theme");
     }
   };
-
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-
   return (
     <div className={theme}>
       <button className="btn" onClick={toggleTheme}>
@@ -37,8 +35,12 @@ function Navigation() {
       <hr />
 
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/tasks" element={<Tasks />} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/tasks">
+          <Tasks />
+        </Route>
       </Routes>
     </div>
   );
